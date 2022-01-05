@@ -1,0 +1,179 @@
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+
+    --text-color: rgba(0, 0, 0, 0.5);
+
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-color: var(--pale-blue);
+    overflow-x: hidden;
+}
+
+p, a {
+    color: var(--text-color);
+    transition: 300ms ease;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+.fw-900 {
+    font-weight: 900;
+}
+
+.order-summary-card {
+    height: 550px;
+
+    overflow: hidden;
+    border-radius: 1rem;;
+
+    background-color: white;
+
+    box-shadow: 0 0.5rem 1.5rem var(--desaturated-blue);
+
+    z-index: 2;
+}
+
+.order-summary-card-image {
+    width: 100%;
+}
+
+.order-summary {
+    text-align: center;
+}
+
+.chosen-plan {
+    width: 80%;
+    min-width: 320px;
+    height: 5rem;
+    margin: 0 auto;
+
+    padding: 0.25rem;
+
+    background-color: var(--very-pale-blue);
+
+    border-radius: 0.75rem;
+
+    display: flex;
+    align-items: center;
+}
+
+.plan-card-image {
+    padding-left: 1rem;
+}
+
+.plan {
+    margin: 0 1rem;
+}
+
+.plan-name {
+    color: black;
+}
+
+.change-plan {
+    text-decoration: none;
+    padding-right: 1rem;
+    margin-left: auto;
+}
+
+.buttons {
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+
+    border-radius: 0.5rem;
+
+    margin: 0.5rem 0;
+
+    line-height: 2.25;
+    text-decoration: none;
+}
+
+.first-button {
+    background-color: var(--bright-blue);
+    color: white;
+
+    width: 80%;
+    height: 2.5rem;
+
+    box-shadow: 0 5px 10px var(--desaturated-blue);
+}
+
+.change-plan:hover,
+.attribution > a:hover,
+.second-button:hover {
+    color: black;
+}
+
+.first-button:hover {
+    background-color: var(--dark-blue);
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+    opacity: 0.75;
+
+    text-align: center;
+
+    padding: 0 1rem;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+
+    width: 100%;
+
+    z-index: 1;
+}
+
+
+
+@media only screen and (max-width: 375px) {
+    .desktop {
+        display: none;
+    }
+    
+    .order-summary-card {
+        width: calc(100vw - 20px);
+        min-width: 260px;
+    }
+
+    .first-button {
+        min-width: 250px;
+    }
+
+
+}
+
+@media only screen and (min-width: 376px) {
+    .mobile {
+        display: none;
+    }
+
+    .order-summary-card {
+        width: 25rem;
+    }    
+}
